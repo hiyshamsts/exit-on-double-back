@@ -1,8 +1,8 @@
-function getCurrentRouteName (navigationState) {
+function getCurrentRouteName(navigationState) {
   if (!navigationState) {
     return null;
   }
-  const route = navigationState.routes[navigationState.index];
+  const route = navigationState.state.routes[navigationState.state.index];
   if (route.routes) {
     return getCurrentRouteName(route);
   }
